@@ -1,3 +1,12 @@
+function deviceReady() {
+	console.log("deviceReady");
+	$("#loginPage").on("pageinit",function() {
+		console.log("pageinit run");
+		$("#loginForm").on("submit",handleLogin);
+		checkPreAuth();
+	});
+	$.mobile.changePage("#loginPage");
+}
 function init() {
 	document.addEventListener("deviceready", deviceReady, true);
 	delete init;
@@ -38,12 +47,3 @@ function handleLogin() {
     return false;
 }
 
-function deviceReady() {
-	console.log("deviceReady");
-	$("#loginPage").on("pageinit",function() {
-		console.log("pageinit run");
-		$("#loginForm").on("submit",handleLogin);
-		checkPreAuth();
-	});
-	$.mobile.changePage("#loginPage");
-}
