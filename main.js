@@ -34,7 +34,7 @@ function handleLogin() {
                 //store
                 window.localStorage["username"] = u;
                 window.localStorage["password"] = p;             
-                $.mobile.changePage("some.html",{allowSamePageTransition:true,reloadPage:false,changeHash:true,transition:"slide"});
+                $.mobile.changePage("some.html");
             } else {
                 navigator.notification.alert("Your login failed", function() {});
             }
