@@ -1,7 +1,7 @@
 function deviceReady() {
 	console.log("deviceReady");
-	$("#loginPage").on("pageinit",function() {
-		console.log("pageinit run");
+	$("#loginPage").on("pageshow",function() {
+		//console.log("pageinit run");
 		$("#loginForm").on("submit",handleLogin);
 		checkPreAuth();
 	});
