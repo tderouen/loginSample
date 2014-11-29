@@ -29,7 +29,7 @@ function handleLogin() {
     var u = $("#username", form).val();
     var p = $("#password", form).val();
     if(u != '' && p!= '') {
-        $.post("https://dev.xstrememd.com/cfc/SecurityService.cfc?method=loginUserApp", {username:u,password:p}, function(res) {
+        $.post("https://m.xstrememd.com/backend/model/services/security.cfc?method=loginUserApp", {username:u,password:p}, function(res) {
             if(res == true) {
                 //store
                 window.localStorage["username"] = u;
