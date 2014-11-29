@@ -34,7 +34,7 @@ function handleLogin() {
                 //store
                 window.localStorage["username"] = u;
                 window.localStorage["password"] = p;             
-                $.mobile.changePage("some.html");
+                $.mobile.changePage("some.html",{reloadPage:false,changeHash:true});
             } else {
                 navigator.notification.alert("Your login failed", function() {});
             }
